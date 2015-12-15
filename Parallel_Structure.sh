@@ -33,7 +33,7 @@ sleep 2
 echo "analysis started at $(date)"
 echo "*"
 echo "*"
-echo "Enter 'ps' to see Structure processes running"
+echo "Enter 'top' to see Structure processes running"
 echo "*"
 echo "*"
 
