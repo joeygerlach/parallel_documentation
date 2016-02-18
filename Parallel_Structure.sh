@@ -17,18 +17,18 @@ if [ -f ./commands.txt ]
 then rm commands.txt
 fi
 
-echo "analysis started at $(date)"
+echo "Structure analysis started at $(date)"
 
 COUNTER=$MINK 
 while [  $COUNTER -le $MAXK  ]; do 
 	REP=1
 	while [ $REP -le $NREP ]; do
-		echo "nohup ./structure -e extraparams_p -m mainparams_p -D $[RANDOM % 999999999] -K $COUNTER -o ./results/"$NAME"_K"$COUNTER"_rep"$REP" 2>&1 " >> commands.txt
+		echo "./structure -e extraparams_p -m mainparams_p -D $[RANDOM % 999999999] -K $COUNTER -o ./results/"$NAME"_K"$COUNTER"_rep"$REP" " >> commands.txt
 		REP=$((REP+1))
 		done
 	let COUNTER=COUNTER+1
 done	
-nohup parallel < commands.txt &
+nohup parallel < commands.txt 2>&1 &
 sleep 2
 echo "analysis started at $(date)"
 echo "*"
@@ -38,6 +38,6 @@ echo "*"
 echo "*"
 
 wait
-echo "STRUCTURE complete"
+echo "STRUCTURE analysis complete"
 echo "completed at $(date)"	
 
