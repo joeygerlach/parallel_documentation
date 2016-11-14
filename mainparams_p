@@ -14,7 +14,7 @@ Basic Program Parameters
 
 define MAXPOPS    2      // (int) number of populations assumed
 #define BURNIN    10000   // (int) length of burnin period
-#define NUMREPS   50000   // (int) number of MCMC reps after burnin
+#define NUMREPS   20000   // (int) number of MCMC reps after burnin
 
 Input/Output files
 
