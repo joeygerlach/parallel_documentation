@@ -7,8 +7,8 @@
 
 NAME=Testdata1			#supply file name suffix
 MINK=1					#supply minimum K value (usually 1)
-MAXK=5					#supply max number of K value to test (K = 1-? )
-NREP=10					#supply number of reps for each Kvalue test
+MAXK=3					#supply max number of K value to test (K = 1-? )
+NREP=3					#supply number of reps for each Kvalue test
 
 if [ ! -d ./results ]
 then mkdir results
@@ -37,7 +37,7 @@ echo "Enter 'top' to see Structure processes running"
 echo "*"
 echo "*"
 
-wait
+wait &
 echo "STRUCTURE analysis complete"
 echo "completed at $(date)"	
 
