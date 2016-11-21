@@ -37,7 +37,5 @@ echo "Enter 'top' to see Structure processes running"
 echo "*"
 echo "*"
 
-wait &
-echo "STRUCTURE analysis complete"
-echo "completed at $(date)"	
+
 
